@@ -1,4 +1,10 @@
-
+drop table utilisateur;
+drop table enfant;
+drop table compte;
+drop table est_compose_de;
+drop table produit;
+drop table commande;
+drop table listecourse;
 INSERT INTO listecourse VALUES(1, 34,20.24);
 --Bon ordre pour insérer les valeurs (pour supprimer table ordre inverse)--
 INSERT INTO COMMANDE values(1,4,1,2);
