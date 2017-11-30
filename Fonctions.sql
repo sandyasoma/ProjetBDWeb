@@ -1,4 +1,26 @@
-CREATE OR REPLACE 
-PROCEDURE
+SET SERVEROUTPUT ON;
+create or replace PROCEDURE ajouterProduit(numProduit IN PRODUIT.numProduit%TYPE,nomProduit IN PRODUIT.nomProduit%TYPE,
+qteProduitDispo IN PRODUIT.qteProduitDispo%TYPE,prixVenteProduit IN PRODUIT.prixVenteProduit%TYPE) IS
+BEGIN
+INSERT INTO PRODUIT VALUES (numProduit,nomProduit,qteProduitDispo,prixVenteProduit);
+END;
+/
+EXECUTE ajouterProduit(2,'caramel',11,7.5);
 
+CREATE OR REPLACE
+PROCEDURE supprimerProduitP(numero PRODUIT.NUMPRODUIT%TYPE)IS
+BEGIN
+DELETE FROM PRODUIT WHERE PRODUIT.NUMPRODUIT=numero;
+END;
+/
+execute supprimerProduitP(1);
 
+CREATE OR REPLACE
+PROCEDURE creerCompteEnfant(numEnfant ENFANT.NUMENFANT%TYPE,
+nomEnfant ENFANT.NOMENFANT%TYPE,prenomEnfant ENFANT.PRENOMENFANT%TYPE,
+dateNaissEnfant ENFANT.DATENAISSENFANT%TYPE,
+mailEnfant ENFANT.MAILENFANT%TYPE,telEnfant ENFANT.TELENFANT, categorieEnfant ENFANT.CATEGORIEENFANT%TYPE,  )IS
+BEGIN
+DELETE FROM PRODUIT WHERE PRODUIT.NUMPRODUIT=numero;
+END;
+/

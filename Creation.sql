@@ -36,10 +36,9 @@ CREATE TABLE Enfant(
 -- Table: Compte
 ------------------------------------------------------------
 CREATE TABLE Compte(
-	numCompte       NUMBER(10,0)  NOT NULL  ,
-	numUtilisateur  NUMBER(10,0)  NOT NULL  ,
-	numEnfant       NUMBER(10,0)  NOT NULL  ,
-	dateSolde       DATE   ,
+	numCompte  NUMBER(10,0)  NOT NULL  ,
+	numEnfant  NUMBER(10,0)  NOT NULL  ,
+	dateSolde  DATE   ,
 	CONSTRAINT Compte_Pk PRIMARY KEY (numCompte)
 );
 
