@@ -27,6 +27,15 @@ END;
 /
 EXECUTE creerCompteEnfant(2,'SOMA','mSurya','15/02/2000','dodor@gmail.com',0169218413,'moins de 12 ans',10.5,4.5,2,1);
 
+CREATE OR REPLACE
+PROCEDURE supprimerCompteEnfant(numEnfant ENFANT.NUMENFANT%TYPE)IS
+BEGIN
+DELETE FROM ENFANT WHERE NUMENFANT=numEnfant;
+END;
+/
+
+EXECUTE supprimerCompteEnfant(2);
+
 create or replace PROCEDURE ajouterParent(numUtilisateur UTILISATEUR.NUMUTILISATEUR%TYPE,loginUtilisateur UTILISATEUR.LOGINUTILISATEUR%TYPE,
 mdpUtilisateur UTILISATEUR.MDPUTILISATEUR%TYPE,numEnfant UTILISATEUR.NUMENFANT%TYPE) IS
 BEGIN
